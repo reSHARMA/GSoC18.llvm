@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Does it shine from Mars ?</title>
+    <description></description>
+    <link>https://www.reshabh.me</link>
+    <atom:link href="https://www.reshabh.me/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Is there any life in the dark?</title>
+        <description>Summary for archiving this blog :)</description>
+        <pubDate>Sun, 12 Aug 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/is-there-any-life-in-the-dark</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/is-there-any-life-in-the-dark</guid>
+      </item>
+    
+      <item>
+        <title>Integration of libcxx and libcxxabi in llvm-toolchain (GSoC'18 week 10 report)</title>
+        <description>Summary of work done in week 10</description>
+        <pubDate>Sun, 22 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/integration-of-libcxx-and-libcxxabi-in-llvm-toolchain-gsoc-18-week-10-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/integration-of-libcxx-and-libcxxabi-in-llvm-toolchain-gsoc-18-week-10-report</guid>
+      </item>
+    
+      <item>
+        <title>OpenMP in llvm-toolchain (GSoC'18 week 8 report)</title>
+        <description>Summary of work done in week 8</description>
+        <pubDate>Sun, 08 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/openmp-in-llvm-toolchain-gsoc-18-week-8-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/openmp-in-llvm-toolchain-gsoc-18-week-8-report</guid>
+      </item>
+    
+      <item>
+        <title>Let's integrate openMP into llvm-toolchain (GSoC'18 week 7 report)</title>
+        <description>Summary of work done in week 7</description>
+        <pubDate>Sun, 01 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/let-s-integrate-openmp-into-llvm-toolchain-gsoc-18-week-7-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/let-s-integrate-openmp-into-llvm-toolchain-gsoc-18-week-7-report</guid>
+      </item>
+    
+      <item>
+        <title>OBS issues and some work arounds (GSoC'18 week 6 report)</title>
+        <description>Summary of work done in week 6</description>
+        <pubDate>Sun, 24 Jun 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/obs-issues-and-some-work-arounds-gsoc-18-week-6-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/obs-issues-and-some-work-arounds-gsoc-18-week-6-report</guid>
+      </item>
+    
+      <item>
+        <title>The obs server worker communication (GSoC'18 week 5 report)</title>
+        <description>Summary of work done in week 5</description>
+        <pubDate>Sun, 17 Jun 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/the-obs-server-worker-communication-gsoc-18-week-5-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/the-obs-server-worker-communication-gsoc-18-week-5-report</guid>
+      </item>
+    
+      <item>
+        <title>The OBS way of doing things!</title>
+        <description>Summary of work done in week 4</description>
+        <pubDate>Sun, 10 Jun 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/the-obs-way-of-doing-things</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/the-obs-way-of-doing-things</guid>
+      </item>
+    
+      <item>
+        <title>OBS up and running (GSoC'18 week 3 report)</title>
+        <description>Summary of work done in week 3</description>
+        <pubDate>Sun, 03 Jun 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report</guid>
+      </item>
+    
+      <item>
+        <title>Setting up OBS at production (GSoC'18 Weekly report)</title>
+        <description>Summary of work done in week 2</description>
+        <pubDate>Sun, 27 May 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/setting-up-obs-at-production-gsoc-18-weekly-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/setting-up-obs-at-production-gsoc-18-weekly-report</guid>
+      </item>
+    
+      <item>
+        <title>Setting up OBS (GSoC'18 Weekly report)</title>
+        <description>Summary of work done in week 1</description>
+        <pubDate>Wed, 23 May 2018 00:00:00 +0530</pubDate>
+        <link>https://www.reshabh.me/posts/setting-up-obs-gsoc-18-weekly-report</link>
+        <guid isPermaLink="true">https://www.reshabh.me/posts/setting-up-obs-gsoc-18-weekly-report</guid>
+      </item>
+    
+  </channel>
+</rss>

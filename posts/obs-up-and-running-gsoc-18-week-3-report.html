@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Does it shine from Mars ? | OBS up and running (GSoC'18 week 3 report)</title>
+  <meta name="description" content="Summary of work done in week 3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="OBS up and running (GSoC&#39;18 week 3 report)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report">
+  <meta property="og:description" content="Summary of work done in week 3">
+  <meta property="og:site_name" content="Does it shine from Mars ?">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report">
+  <meta name="twitter:title" content="OBS up and running (GSoC&#39;18 week 3 report)">
+  <meta name="twitter:description" content="Summary of work done in week 3">
+
+  
+    <meta property="og:image" content="https://www.reshabh.me/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="https://www.reshabh.me/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="../feed.xml" type="application/rss+xml" rel="alternate" title="Does it shine from Mars ? Last 10 blog posts" />
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="../assets/favicon-light-a98c41efc5ed9fcc06ac664c9e2f7a9b3c3b2e0a52357d221fe382f6f4abc8fc.ico">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
+    <link rel="stylesheet" type="text/css" href="../assets/light-66f45f496d3d18e5d0be0a1c4197083526ac584c945d0ef492f7375867f3b191.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="../index.html" class="header-logo" title="Does it shine from Mars ?">Does it shine from Mars ?</a>
+  <ul class="header-links">
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/reSHARMA" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:reshabhsh@gmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email" xlink:href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="../feed.xml.html" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>OBS up and running (GSoC'18 week 3 report)</h1>
+            <p>Summary of work done in week 3</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                June 3, 2018
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  4 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="http://www.reshabh.me/tag/Week-3">Week-3</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h1 id="obs-up-and-working-">OBS up and working !!</h1>
+
+<p>Week two ended in some pending tasks:</p>
+<ul>
+  <li>SSL certificates using certbot</li>
+  <li>OBS web application crashing</li>
+</ul>
+
+<h2 id="as-requested-port-80-443-5252-were-opened">As requested port 80, 443, 5252 were opened</h2>
+
+<p>Opening port 80 instantly solved ssl issue and I managed to configure right path for ssl certificates in obs.conf.</p>
+
+<p>The errors in the production.log by the unreachability of irill8.siege.inria.fr:5252 got solved as port 5252 was exposed.</p>
+
+<p>Later another error occured due to the scheduler pointing to wrong source server “irill.inria.fr:5352” 
+Many thanks to Athos Ribeiro for fixing that and bringing the OBS up to life :)</p>
+
+<p>After extensively trying to somehow point the repo server to localhost:5252 from irill8.siege.inria.fr:5252 in order to make it work locally (atleast), though changing the configuration in the BSConfig.pm file would have worked but strangely it uses the host name defined in /etc/hosts instead of the one defined explicitly.</p>
+
+<p>The above issue didn’t matter much as we are not willing to run it locally for now (keeping the /etc/hosts intact).</p>
+
+<h2 id="insight-of-work-in-coming-week">Insight of work in coming week</h2>
+
+<p>Rest of the time I spend on trying to prototype the work for coming weeks.</p>
+
+<h3 id="quite-late-but-i-realized-why-jobs-are-scheduled-in-the-jenkins-instance-and-not-updated-through-the-fancy-git-commit-way">Quite late but I realized why jobs are scheduled in the jenkins instance and not updated through the “fancy” git commit way</h3>
+
+<p>That is the only sustainable way to do it for our use case!</p>
+
+<h3 id="till-now-i-could-not-find-a-way-to-run-bash-scripts-pre-and-post-build-in-obs-though-they-talk-about-some-pre-written-services-that-serves-the-basic-need-of-packaging-but-i-fear-that-wont-be-enough-in-our-case">Till now I could not find a way to run bash scripts pre and post build in OBS, though they talk about some pre-written services that serves the basic need of packaging but I fear that won’t be enough in our case.</h3>
+
+<h3 id="pre-build-flow-taken-from-jobscreate-jobssource-templatexml">Pre-build flow (taken from <a href="https://github.com/opencollab/llvm-jenkins.debian.net/blob/master/jobs/create-jobs/source-template.xml">jobs/create-jobs/source-template.xml</a>)</h3>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">export PRE_SOURCE_HOOK=<span class="ni">&amp;quot;</span>source/debian/orig-tar.sh @BRANCH@<span class="ni">&amp;quot;</span>
+export GBP_OPTS=<span class="ni">&amp;quot;</span>-nc --git-force-create --git-ignore-new --git-ignore-branch -S -us -uc --git-verbose --git-builder=/bin/true --git-cleaner=/bin/true --git-export-dir=   --git-tarball-dir=. --git-no-create-orig<span class="ni">&amp;quot;</span>
+export SKIP_GIT_CLEANUP=true
+export DISTRIBUTION=@DISTRIBUTION@
+/usr/bin/generate-git-snapshot</code></pre></figure>
+
+<h3 id="from-building-llvm-packages-from-source">From <a href="https://apt.llvm.org/building-pkgs.php">Building LLVM packages from source</a></h3>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">git clone https://salsa.debian.org/pkg-llvm-team/llvm-toolchain.git -b snapshot snapshot
+sh snapshot/debian/orig-tar.sh
+sh snapshot/debian/unpack.sh</code></pre></figure>
+
+<h3 id="list-of-obs-services-available-all-obs-services-available">List of OBS services available (<a href="https://en.opensuse.org/openSUSE:Build_Service_Concept_SourceService#All_OBS_services_available">All OBS services available</a>)</h3>
+
+<ul>
+  <li>cpanspec 			- A wrapper around cpanspec script</li>
+  <li>download_files 		- This service is parsing all spec files and downloads all Source files which are specified via a http, https or ftp url.</li>
+  <li>download_src_package 		- It supports downloading src.rpms and extracting.</li>
+  <li>download_url 			- It supports downloading files from given URLs via curl.</li>
+  <li>extract_file 			- It supports to extract a file from an archive, for example a spec file from a tar.</li>
+  <li>format_spec_file 		- This source service is formating the spec file to SUSE standard</li>
+  <li>generator_driver_update_disk 	- Creates kiwiw files to create driver update disks used to deliver updated hardware drivers to install older suse versions on newer hardware.</li>
+  <li>generator_pom 		- Is supports downloading a java source from Maven Central and creates the build description for it.</li>
+  <li>git_tarballs 			- It downloads tarballs from upstream and updates the spec file version and changes file.</li>
+  <li>github_tarballs 		- It downloads tarballs from upstream and updates the spec file version and changes file using information from a github repository.</li>
+  <li>kiwi_import 			- It supports the import of a generic kiwi archive.</li>
+  <li>part2pkg 			- snapcraft part repackage service for OBS</li>
+  <li>python_requires 		- It refreshes Python Requires from the pypi source tarball</li>
+  <li>product_converter 		- New product converter as OBS source service instead of OBS built-in</li>
+  <li>python_sdist 			- It generates Python source distribution (sdist) tarballs</li>
+  <li>rearchive 			- It unpacks non-tar-archives to a temporary directory and generates a compressed tar archive (tar.gz). Supported formats: .zip</li>
+  <li>recompress 			- It supports to compress, uncompress or recompress files from or to</li>
+  <li>refresh_patches 		-  It refreshes locals patches by using quilt.</li>
+  <li>regex_replace 		- Very simply script to change the content of a file using regular expressions</li>
+  <li>renderspec 			- It supports rendering .spec.j2 templates via renderspec.</li>
+  <li>set_version 			- Very simply script to update the version in .spec or .dsc files according to a given version or to the existing files.</li>
+  <li>source_validator 		- This service runs all checks as required by openSUSE:Factory project. This can be used to guarantee that all checks succeed also on the service side. This plugin can be used via project wide defined services.</li>
+  <li>tar_scm 			-  It supports downloading from svn, git, hg and bzr repositories.</li>
+  <li>verify_file 			- This is a source service for openSUSE Build Service. It allows to verify a file with a given sha256sum</li>
+</ul>
+
+<p>Though most of them are SUSE flavoured but some are generic like tar_scm, download_url etc</p>
+
+<p>The initial step of getting the upstream source can be done via tar_scm but I’m still unable to find a way to go ahead with other steps using these services, moreover I can feel that even if I rewrite orig-tar.sh using these services (I’m not sure how it can be done as a markup file is generated which may not be manipulated at our desire) the later stage like generating the dsc and other steps might not be possible.</p>
+
+<p>I also feel that the steps given at apt.llvm.org are independent of the build infrastructure (I’ll confirm this once) and must not be altered for a new build infrastructure.</p>
+
+<h3 id="proposed-work-around-as-of-now">Proposed work around as of now</h3>
+
+<p>I personally like OBS for tracking the source, and it does not start the build if the source is not changed since last build (I noticed this while testing on the openSUSE reference server).</p>
+
+<p>My proposed work around is a bash script which would get the upstream source and would run orig-tar.sh to repack it into source tar balls, will generate the .dsc file and will add all these to OBS, if something is changed it will automatically start building.</p>
+
+<p><em>The above are intutions and will be coming with something concrete once I test and explore them more</em></p>
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=OBS+up+and+running+(GSoC'18+week+3+report)%20-%20https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=https://www.reshabh.me/posts/obs-up-and-running-gsoc-18-week-3-report" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script src="https://www-reshabh-me.disqus.com/embed.js" async defer></script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Made with 
+    <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk"> Chalk</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+
+<script src="../assets/vendor-fc473e608b0b6ac860d7cf928f4599e674f10e478cae7f4122bc51ccf885cbe8.js" type="text/javascript"></script>
+
+
+  <script src="../assets/webfonts-e3010885de8c083c4b2935d463b1649e8796191a66a1b43bb87ef04bbcce420d.js" type="text/javascript"></script>
+
+
+
+  <script src="../assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="../assets/application-6542ce1f4b08c8bb3dedf929d13653238a86988e0e972326e4e1f7875b1fe49f.js" type="text/javascript"></script>
+
+</body>
+</html>
